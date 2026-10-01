@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+    color: #1C2925;
+    background-color: #F8F6F1;
+  }
+}
+
+/* Lenis Smooth Scroll Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F6F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #8FAF9A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1F5C4F;
+}
+
+/* Glassmorphism utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px -15px rgba(28, 41, 37, 0.07), 0 0 15px rgba(201, 169, 110, 0.05);
+}
+
+.glass-badge {
+  background: rgba(232, 240, 234, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(143, 175, 154, 0.3);
+}
+
+/* Organic Mask Silhouette for Hero Visual */
+.organic-mask-shape {
+  border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%;
+  transition: border-radius 8s ease-in-out infinite alternate;
+}
+
+@keyframes organicMorph {
+  0% {
+    border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%;
+  }
+  33% {
+    border-radius: 53% 47% 48% 52% / 38% 52% 48% 62%;
+  }
+  66% {
+    border-radius: 48% 52% 35% 65% / 55% 35% 65% 45%;
+  }
+  100% {
+    border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%;
+  }
+}
+
+.animate-morph {
+  animation: organicMorph 14s ease-in-out infinite alternate;
+}
+
+/* Shimmer Light Reflection */
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(200%) rotate(25deg); }
+}
+
+.animate-shimmer {
+  animation: shimmer 6s infinite;
+}
