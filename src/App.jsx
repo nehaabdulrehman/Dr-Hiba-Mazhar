@@ -33,7 +33,7 @@ export default function App() {
 
   return (
     <SmoothScroll modalOpen={appointmentModalOpen}>
-      <div className="relative min-h-screen bg-[#F8F6F1] text-[#1C2925] font-sans overflow-hidden">
+      <div className="relative min-h-screen bg-[#F8F6F1] text-[#1C2925] font-sans overflow-x-clip">
         {/* Soft Atmospheric Fog & Motion Shader Background */}
         <SmokyAtmosphere mousePos={mousePos} />
 
