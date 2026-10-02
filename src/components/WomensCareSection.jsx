@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 
-export default function WomensCareSection({ onOpenAppointment }) {
+export default function WomensCareSection() {
   const sectionRef = useRef(null);
   const shouldReduceMotion = useReducedMotion();
 
@@ -256,13 +256,13 @@ export default function WomensCareSection({ onOpenAppointment }) {
 
             {/* Outline Pill CTA Button ("Book Appointment") */}
             <motion.div variants={textVariants}>
-              <button
-                onClick={onOpenAppointment}
+              <a
+                href="#footer"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-full bg-white hover:bg-[#E8F0EA]/60 border border-[#1F5C4F] text-[#1F5C4F] text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-200 group"
               >
                 <Calendar className="w-4 h-4 text-[#1F5C4F] group-hover:rotate-12 transition-transform duration-300" />
                 <span>{womensCareSection.buttonText}</span>
-              </button>
+              </a>
             </motion.div>
 
           </motion.div>

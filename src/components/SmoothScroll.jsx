@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Lenis from 'lenis';
 
-export default function SmoothScroll({ children, modalOpen }) {
+export default function SmoothScroll({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -48,17 +48,6 @@ export default function SmoothScroll({ children, modalOpen }) {
       delete window.lenis;
     };
   }, []);
-
-  // Pause lenis when appointment modal is open to prevent background scroll
-  useEffect(() => {
-    if (window.lenis) {
-      if (modalOpen) {
-        window.lenis.stop();
-      } else {
-        window.lenis.start();
-      }
-    }
-  }, [modalOpen]);
 
   return <>{children}</>;
 }

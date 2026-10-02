@@ -9,12 +9,10 @@ import PatientStoriesSection from './components/PatientStoriesSection';
 import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 import SmokyAtmosphere from './components/SmokyAtmosphere';
-import AppointmentModal from './components/AppointmentModal';
 import StickyWhatsAppButton from './components/StickyWhatsAppButton';
 import SmoothScroll from './components/SmoothScroll';
 
 export default function App() {
-  const [appointmentModalOpen, setAppointmentModalOpen] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   // Track cursor position normalized from -1 to 1 for desktop parallax
@@ -32,23 +30,20 @@ export default function App() {
   }, []);
 
   return (
-    <SmoothScroll modalOpen={appointmentModalOpen}>
+    <SmoothScroll>
       <div className="relative min-h-screen bg-[#F8F6F1] text-[#1C2925] font-sans overflow-x-clip">
         {/* Soft Atmospheric Fog & Motion Shader Background */}
         <SmokyAtmosphere mousePos={mousePos} />
 
         {/* Navigation Header */}
-        <Navbar onOpenAppointment={() => setAppointmentModalOpen(true)} />
+        <Navbar />
 
         {/* Main Content Sections */}
         <main className="relative z-10">
-          <HeroSection
-            onOpenAppointment={() => setAppointmentModalOpen(true)}
-            mousePos={mousePos}
-          />
+          <HeroSection mousePos={mousePos} />
           <AboutSection />
-          <WomensCareSection onOpenAppointment={() => setAppointmentModalOpen(true)} />
-          <ChildrensCareSection onOpenAppointment={() => setAppointmentModalOpen(true)} />
+          <WomensCareSection />
+          <ChildrensCareSection />
           <ProcessSection />
           <PatientStoriesSection />
           <FaqSection />
@@ -57,12 +52,6 @@ export default function App() {
 
         {/* Global Sticky WhatsApp Button */}
         <StickyWhatsAppButton />
-
-        {/* Interactive Appointment Modal */}
-        <AppointmentModal
-          isOpen={appointmentModalOpen}
-          onClose={() => setAppointmentModalOpen(false)}
-        />
       </div>
     </SmoothScroll>
   );

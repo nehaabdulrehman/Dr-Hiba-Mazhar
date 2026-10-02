@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 
-export default function Navbar({ onOpenAppointment }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -62,7 +62,12 @@ export default function Navbar({ onOpenAppointment }) {
   const handleItemClick = (item, e) => {
     if (item.isAction && item.href === 'action:book') {
       e.preventDefault();
-      onOpenAppointment();
+      const targetEl = document.querySelector('#footer');
+      if (targetEl && window.lenis) {
+        window.lenis.scrollTo(targetEl, { offset: -80 });
+      } else if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+      }
       setActiveDropdown(null);
       setMobileMenuOpen(false);
     } else if (item.isExternal && item.href.startsWith('external:')) {
@@ -307,16 +312,14 @@ export default function Navbar({ onOpenAppointment }) {
 
               {/* Mobile Drawer Bottom CTA Button */}
               <div className="pt-3 mt-1">
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    onOpenAppointment();
-                  }}
+                <a
+                  href="#footer"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-[#1F5C4F] text-white text-xs font-semibold shadow-md shadow-[#1F5C4F]/20 active:scale-95 transition-all"
                 >
                   <Calendar className="w-4 h-4 text-[#8FAF9A]" />
                   <span>Book Appointment</span>
-                </button>
+                </a>
               </div>
 
             </div>

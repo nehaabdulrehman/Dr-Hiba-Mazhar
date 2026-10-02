@@ -17,7 +17,7 @@ export const SITE_CONFIG = {
   
   // External Action Links (Easily editable placeholders)
   links: {
-    bookingUrl: "#book-appointment",
+    bookingUrl: "#footer",
     googleMapsUrl: "https://www.google.com/maps/place/Dr+Hiba+Mazhar/@24.8240813,67.1685336,17z/data=!4m8!3m7!1s0x3eb339a0d0a9cc71:0xd5a8466717679885!8m2!3d24.8240765!4d67.1711085!9m1!1b1!16s%2Fg%2F11xnpvh15r?entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D",
     googleReviewUrl: "https://www.google.com/maps/place/Dr+Hiba+Mazhar/@24.8240813,67.1685336,17z/data=!4m8!3m7!1s0x3eb339a0d0a9cc71:0xd5a8466717679885!8m2!3d24.8240765!4d67.1711085!9m1!1b1!16s%2Fg%2F11xnpvh15r?entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D",
     whatsappUrl: WHATSAPP_URL,

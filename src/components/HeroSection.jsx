@@ -11,7 +11,7 @@ const HERO_CONFIG = {
   cardSubtext: "Safe, effective and tailored homeopathic solutions for you and your family.",
 };
 
-export default function HeroSection({ onOpenAppointment, mousePos }) {
+export default function HeroSection({ mousePos }) {
   const [cardHovered, setCardHovered] = useState(false);
 
   // Parallax physics springs based on normalized mousePos (-1 to 1)
@@ -125,13 +125,13 @@ export default function HeroSection({ onOpenAppointment, mousePos }) {
 
             {/* CTA Buttons */}
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 mb-8 w-full sm:w-auto">
-              <button
-                onClick={onOpenAppointment}
+              <a
+                href="#footer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#1F5C4F] hover:bg-[#17483E] text-white text-base font-semibold shadow-lg shadow-[#1F5C4F]/25 hover:shadow-xl hover:shadow-[#1F5C4F]/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group"
               >
                 <span>Book Appointment</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
+              </a>
 
               <a
                 href="#treatments"
@@ -211,14 +211,14 @@ export default function HeroSection({ onOpenAppointment, mousePos }) {
               className="relative w-full max-w-lg lg:max-w-xl z-10 group flex items-center justify-center"
             >
 
-              {/* Direct PNG Image sitting on page background with object-contain */}
-              <div className="relative w-full flex items-center justify-center">
+              {/* Framed Photo with Organic Rounded Frame */}
+              <div className="relative w-full flex items-center justify-center overflow-hidden rounded-[2.5rem] shadow-2xl border border-white/80 bg-[#E8F0EA]/30">
                 <img
-                  src="/images/hero-image.png"
-                  alt={HERO_CONFIG.heroImageAlt}
+                  src="/images/hero-replacement.jpg"
+                  alt="Dr. Hiba Mazhar, Homeopathic Doctor"
                   loading="eager"
                   fetchpriority="high"
-                  className="w-full h-auto max-h-[500px] sm:max-h-[540px] object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-auto max-h-[480px] sm:max-h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
 
