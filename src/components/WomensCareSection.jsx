@@ -135,7 +135,7 @@ export default function WomensCareSection() {
         >
 
           {/* LEFT SIDE - Image & Decorative Green Accent Lines */}
-          <motion.div variants={imageVariants} className="lg:col-span-6 relative flex justify-center">
+          <motion.div variants={imageVariants} className="order-2 lg:order-1 lg:col-span-6 relative flex justify-center">
             
             {/* Main Outer Decorative Framework Wrapper */}
             <div className="relative w-full max-w-[480px] lg:max-w-none">
@@ -199,7 +199,7 @@ export default function WomensCareSection() {
           </motion.div>
 
           {/* RIGHT SIDE - Content, Conditions & CTA Button */}
-          <motion.div variants={containerVariants} className="lg:col-span-6 flex flex-col items-start">
+          <motion.div variants={containerVariants} className="order-1 lg:order-2 lg:col-span-6 flex flex-col items-start">
             
             {/* Small Label */}
             <motion.span variants={textVariants} className="text-[0.75rem] font-semibold uppercase tracking-widest text-[#1F5C4F] mb-2.5 inline-flex items-center gap-2">

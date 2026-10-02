@@ -214,7 +214,7 @@ export default function HeroSection({ mousePos }) {
               {/* Framed Photo with Organic Rounded Frame */}
               <div className="relative w-full flex items-center justify-center overflow-hidden rounded-[2.5rem] shadow-2xl border border-white/80 bg-[#E8F0EA]/30">
                 <img
-                  src="/images/hero-side-v2.png"
+                  src="/images/hero-side-v3.jpg"
                   alt="Dr. Hiba Mazhar, Homeopathic Doctor"
                   loading="eager"
                   fetchpriority="high"

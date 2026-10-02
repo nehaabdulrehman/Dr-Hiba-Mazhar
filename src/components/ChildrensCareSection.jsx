@@ -190,7 +190,7 @@ export default function ChildrensCareSection() {
           className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center"
         >
           {/* LEFT SIDE CONTENT - Stacks after image on mobile */}
-          <motion.div variants={containerVariants} className="order-2 lg:order-1 lg:col-span-7 flex flex-col items-start">
+          <motion.div variants={containerVariants} className="order-1 lg:order-1 lg:col-span-7 flex flex-col items-start">
             
             {/* Small Label */}
             <motion.span variants={textVariants} className="text-[0.75rem] font-semibold uppercase tracking-widest text-[#1F5C4F] mb-2.5 inline-flex items-center gap-2">
@@ -259,7 +259,7 @@ export default function ChildrensCareSection() {
           </motion.div>
 
           {/* RIGHT SIDE IMAGE - Stacks first on mobile */}
-          <motion.div variants={imageVariants} className="order-1 lg:order-2 lg:col-span-5 relative flex justify-center">
+          <motion.div variants={imageVariants} className="order-2 lg:order-2 lg:col-span-5 relative flex justify-center">
             
             {/* Main Outer Decorative Framework Wrapper */}
             <div className="relative w-full max-w-[440px] lg:max-w-none">
