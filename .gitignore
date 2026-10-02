@@ -28,3 +28,10 @@ Thumbs.db
 .idea/
 .vscode/
 .vercel/
+
+# Root raw source images
+/Again Hero Replacement.png
+/Hero Replacement.jpg
+/Hero Image.png
+/replace hero image.png
+
